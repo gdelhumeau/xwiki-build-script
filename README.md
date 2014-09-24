@@ -11,7 +11,7 @@ By default, the generated instance is unzipped in a directory not related to the
 
 Prerequisites
 ===
-You need a Python interpreter, Maven ([correctly configured](http://dev.xwiki.org/xwiki/bin/view/Community/Building)), and the XWiki sources. The script assumes that you have cloned the (XWiki Enterprise Repository)[https://github.com/xwiki/xwiki-enterprise] in the `~/xwiki/xwiki-enterprise` directory. It will create the build in the `~/xwiki-instance` directory.
+You need a Python interpreter, Maven ([correctly configured](http://dev.xwiki.org/xwiki/bin/view/Community/Building)), and the XWiki sources. The script assumes that you have cloned the [XWiki Enterprise Repository](https://github.com/xwiki/xwiki-enterprise) in the `~/xwiki/xwiki-enterprise` directory. It will create the build in the `~/xwiki-instance` directory.
 
 Usage
 ===
