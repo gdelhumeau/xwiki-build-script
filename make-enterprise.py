@@ -6,11 +6,11 @@ import os.path
 import shutil
 import zipfile
 import sys
+import xml.etree.ElementTree as ET
 #####################
 ## GLOBALS
 #####################
 home = os.path.expanduser("~")
-version = "6.3-SNAPSHOT"
 cmd = "mvn clean install -pl xwiki-enterprise-distribution/xwiki-enterprise-jetty/xwiki-enterprise-jetty-hsqldb/"
 xe_sources = home + "/xwiki/xwiki-enterprise"
 xe_target = xe_sources+ "/xwiki-enterprise-distribution/xwiki-enterprise-jetty/xwiki-enterprise-jetty-hsqldb/target"
@@ -49,9 +49,16 @@ def clean():
   if os.path.exists(instance_path):
     shutil.rmtree(instance_path)
 #####################
+## DETECT THE VERSION
+#####################
+def detectVersion():
+  tree = ET.parse(xe_sources + "/pom.xml")
+  return tree.getroot().find("{http://maven.apache.org/POM/4.0.0}version").text
+#####################
 ## UNZIP
 #####################
 def unzip():
+  version = detectVersion()
   log_section("3. Uncompressing the new build")
   zfile = zipfile.ZipFile(xe_target + "/xwiki-enterprise-jetty-hsqldb-"+version+".zip")
   for name in zfile.namelist():

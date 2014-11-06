@@ -27,10 +27,6 @@ Options
 * `-U`: same as maven, it will force the update of the dependencies.
 * `-am`: (to be implemented) means 'Also Make dependencies'. Instead of downloading them, all dependencies that have their sources in the `xwiki-enterprise` directory will be compiled. So it does not concern dependencies like `xwiki-platform`, `xwiki-rendering` and `xwiki-commons`.
 
-Limitations
-===
-Currently, you have to edit the script to set the `version` variable according to the state of your sources. Right now, it is `6.3-SNAPSHOT`.
-
 Contact
 ===
 Feel free to contact me, create issues or pull request on the github project. Thanks.
