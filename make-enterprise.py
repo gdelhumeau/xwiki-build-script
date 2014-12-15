@@ -33,6 +33,9 @@ def build():
     if arg == "-U":
       global cmd
       cmd = cmd + " -U"
+    elif arg == "-am":
+      global cmd
+      cmd = cmd + " -am"
     elif arg == "nobuild":
       log_section("1. NO BUILD")
       return

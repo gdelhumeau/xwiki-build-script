@@ -25,7 +25,7 @@ If you want to change the path of the sources and/or of the output, just edit th
 Options
 ===
 * `-U`: same as maven, it will force the update of the dependencies.
-* `-am`: (to be implemented) means 'Also Make dependencies'. Instead of downloading them, all dependencies that have their sources in the `xwiki-enterprise` directory will be compiled. So it does not concern dependencies like `xwiki-platform`, `xwiki-rendering` and `xwiki-commons`.
+* `-am`: means 'Also Make dependencies'. Instead of downloading them, all dependencies that have their sources in the `xwiki-enterprise` directory will be compiled. So it does not concern dependencies like `xwiki-platform`, `xwiki-rendering` and `xwiki-commons`.
 
 Contact
 ===
