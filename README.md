@@ -3,11 +3,13 @@ XWiki Enterprise Build Script
 
 Easily build a reasy-to-use XWiki instance with this helper.
 
-Objective
+Objectives
 ===
 I often build an up-to-date version of [XWiki Enterprise](http://enterprise.xwiki.org/xwiki/bin/view/Main/WebHome) with maven. This script automates the process of creating the Jetty/HSQLDB distribution and unziping it.
 
 By default, the generated instance is unzipped in a directory not related to the XWiki Sources. The reason is that when I run XWiki in the standard maven target directory, my IDE tries to index the files and become very slow.
+
+It also creates a symbolic link to the `webapp/xwiki/WEB-INF/lib` directory into `~/xwiki-instance/lib`, so that you can easily recompile a module and install it with `cp target/my-module.jar ~/xwiki-instance/lib`.
 
 Prerequisites
 ===
