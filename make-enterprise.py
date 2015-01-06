@@ -29,12 +29,11 @@ def log_section(title):
 ## BUILD
 #####################
 def build():
+  global cmd
   for arg in sys.argv:
     if arg == "-U":
-      global cmd
       cmd = cmd + " -U"
     elif arg == "-am":
-      global cmd
       cmd = cmd + " -am"
     elif arg == "nobuild":
       log_section("1. NO BUILD")
